@@ -1,3 +1,7 @@
-body{
-    background: gold;
+:root{
+    --color_primary: rgb(123, 6, 123); /*When hovering over project card*/
+    --color_secondary: rgb(178, 11, 158) (39, 35, 35);
+    --color_accent: rgb(255, 140, 0);
+    --color_headings: rgb(48, 2, 48);
+    --color_body: rgb(217, 180, 217);
 }
