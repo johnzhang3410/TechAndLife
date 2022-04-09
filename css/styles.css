@@ -2,6 +2,56 @@
     --color_primary: rgb(123, 6, 123); /*When hovering over project card*/
     --color_secondary: rgb(178, 11, 158) (39, 35, 35);
     --color_accent: rgb(255, 140, 0);
-    --color_headings: rgb(48, 2, 48);
-    --color_body: rgb(217, 180, 217);
+    --color_headings: rgb(114, 11, 114);
+    --color_body: rgb(198, 125, 198);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    line-height: 1.5; /* 1.5 times font size */
+    color: var(--color_body);
+}
+
+h1, h2, h3{
+    color: var(--color_headings);
+    margin-bottom: 1rem;
+}
+
+h1{
+    font-size: 7rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+p{
+    margin-top: 0;
+}
+
+@media screen and (min-width: 1024px){
+    body{
+        font-size: 1.8rem;
+    }
+
+    h1{
+        font-size: 8rem;
+    }
+
+    h2{
+        font-size: 5rem;
+    }
+
+    h3{
+        font-size: 3.3rem;
+    }
 }
