@@ -1,6 +1,6 @@
 :root{
     --color_primary: rgb(123, 6, 123); /*When hovering over project card*/
-    --color_secondary: rgb(178, 11, 158) (39, 35, 35);
+    --color_secondary: rgb(178, 11, 158);
     --color_accent: rgb(255, 72, 0);
     --color_headings: rgb(114, 11, 114);
     --color_body: rgb(198, 125, 198);
@@ -13,10 +13,10 @@ html{
 }
 
 body{
+    color: var(--color_body);
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 2rem;
     line-height: 1.5; /* 1.5 times font size */
-    color: var(--color_body);
 }
 
 h1, h2, h3{
@@ -61,9 +61,9 @@ a {
 
 .link-arrow{
     color: var(--color_accent);
-    text-transform: uppercase;
     font-size: 2rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .link-arrow::after{
@@ -79,5 +79,42 @@ a {
 @media screen and (min-width: 1024px){
     .link-arrow{
         font-size: 1.5rem;
+    }
+}
+
+/* Badges */
+/* Utilization of Object Oriented CSS allow free combinations of badge color/size */
+
+/* Structure of a badge */
+.badge{ 
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    white-space: nowrap; /* Badge doesn't wrap to a new line */
+} 
+
+/* Badge color/size variations */
+.badge--primary{
+    background: var(--color_primary);
+    color: white;
+}
+
+.badge--secondary{
+    background: var(--color_secondary);
+    color: white;
+}
+
+.badge--small{
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px){
+    .badge{
+        font-size: 1.5rem;
+    }
+
+    .badge--small{
+        font-size: 1.2rem;
     }
 }
