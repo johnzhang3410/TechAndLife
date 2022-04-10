@@ -149,3 +149,24 @@ a {
         padding-left: 0;
     }
 }
+
+/* Icons */
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon--primary {
+    fill: var(--color_primary);
+}
+
+.icon-container{
+    background: #f3f9faee;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    display: inline-flex; /* Make span element take into account width and height, and positions items in container */
+    justify-content: center;
+    align-items: center;
+}
