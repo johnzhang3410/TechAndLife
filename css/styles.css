@@ -6,6 +6,12 @@
     --color_body: rgb(198, 125, 198);
 }
 
+/* Universal selector, sets box-sizing so that padding/border pixels are part of defined width/height */
+/* This is so we don't get 110% box (due to padding) when we only set width to be 100% */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 /* Typography */
 
 html{
@@ -169,4 +175,69 @@ a {
     display: inline-flex; /* Make span element take into account width and height, and positions items in container */
     justify-content: center;
     align-items: center;
+}
+
+/* Buttons */
+
+.button {
+    border-radius: 40px;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 2rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap; /* Text in button won't wrap to new line */
+    margin: 1rem 0;
+}
+
+.button--primary {
+    background: var(--color_primary);
+    color: white;
+}
+
+.button--primary:hover {
+    background: rgb(135, 18, 135);
+}
+
+.button--secondary {
+    background: var(--color_secondary);
+    color: white;
+}
+
+.button--secondary:hover {
+    background: rgb(175, 36, 159);
+}
+
+.button--accent {
+    background: var(--color_accent);
+    color: white;
+}
+
+.button--accent:hover {
+    background: rgb(255, 86, 19);
+}
+
+.button--outline {
+    background: white;
+    color: var(--color_headings);
+    border: 2px solid var(--color_headings);
+}
+
+.button--outline:hover {
+    background: var(--color_headings);
+    color: white;
+}
+
+/* This button takes up entire width of its parent element */
+.button--block {
+    width: 100%;
+    display: inline-block; /* anchor elements are inline by default, this is to make width work */
+}
+
+@media screen and (min-width: 1024px) {
+    .button {
+        font-size: 1.5rem;
+    }
 }
