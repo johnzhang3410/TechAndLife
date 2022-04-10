@@ -1,243 +1,270 @@
-:root{
-    --color_primary: rgb(123, 6, 123); /*When hovering over project card*/
-    --color_secondary: rgb(178, 11, 158);
-    --color_accent: rgb(255, 72, 0);
-    --color_headings: rgb(114, 11, 114);
-    --color_body: rgb(198, 125, 198);
+:root {
+  --color_primary: rgb(123, 6, 123); /*When hovering over project card*/
+  --color_secondary: rgb(178, 11, 158);
+  --color_accent: rgb(255, 72, 0);
+  --color_headings: rgb(114, 11, 114);
+  --color_body: rgb(198, 125, 198);
 }
 
 /* Universal selector, sets box-sizing so that padding/border pixels are part of defined width/height */
 /* This is so we don't get 110% box (due to padding) when we only set width to be 100% */
-*, *::after, *::before {
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 /* Typography */
 
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
-body{
-    color: var(--color_body);
-    font-family: Inter, Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    line-height: 1.5; /* 1.5 times font size */
+body {
+  color: var(--color_body);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  line-height: 1.5; /* 1.5 times font size */
 }
 
-h1, h2, h3{
-    color: var(--color_headings);
-    margin-bottom: 1rem;
+h1,
+h2,
+h3 {
+  color: var(--color_headings);
+  margin-bottom: 1rem;
 }
 
-h1{
-    font-size: 7rem;
+h1 {
+  font-size: 7rem;
 }
 
 h2 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 h3 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
-p{
-    margin-top: 0;
+p {
+  margin-top: 0;
 }
 
-@media screen and (min-width: 1024px){
-    body{
-        font-size: 1.8rem;
-    }
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
 
-    h1{
-        font-size: 8rem;
-    }
+  h1 {
+    font-size: 8rem;
+  }
 
-    h3{
-        font-size: 2rem;
-    }
+  h3 {
+    font-size: 2rem;
+  }
 }
 
 /* Links */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.link-arrow{
-    color: var(--color_accent);
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
+.link-arrow {
+  color: var(--color_accent);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.link-arrow::after{
-    content: '-->';
-    margin-left: 5px;
-    transition: margin 0.15s;
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin 0.15s;
 }
 
-.link-arrow:hover::after{ /*Arrow move right when hover over link*/
-    margin-left: 10px;
+.link-arrow:hover::after {
+  /*Arrow move right when hover over link*/
+  margin-left: 10px;
 }
 
-@media screen and (min-width: 1024px){
-    .link-arrow{
-        font-size: 1.5rem;
-    }
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
+  }
 }
 
 /* Badges */
 /* Utilization of Object Oriented CSS allow free combinations of badge color/size */
 
 /* Structure of a badge */
-.badge{ 
-    border-radius: 20px;
-    font-size: 2rem;
-    font-weight: 600;
-    padding: 0.5rem 2rem;
-    white-space: nowrap; /* Badge doesn't wrap to a new line */
-} 
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  white-space: nowrap; /* Badge doesn't wrap to a new line */
+}
 
 /* Badge color/size variations */
-.badge--primary{
-    background: var(--color_primary);
-    color: white;
+.badge--primary {
+  background: var(--color_primary);
+  color: white;
 }
 
-.badge--secondary{
-    background: var(--color_secondary);
-    color: white;
+.badge--secondary {
+  background: var(--color_secondary);
+  color: white;
 }
 
-.badge--small{
-    font-size: 1.6rem;
+.badge--small {
+  font-size: 1.6rem;
 }
 
-@media screen and (min-width: 1024px){
-    .badge{
-        font-size: 1.5rem;
-    }
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+  }
 
-    .badge--small{
-        font-size: 1.2rem;
-    }
+  .badge--small {
+    font-size: 1.2rem;
+  }
 }
 
 /* Lists */
 
 .list {
-    list-style: none;
-    padding-left: 0;
-    color: var(--color_headings);
+  list-style: none;
+  padding-left: 0;
+  color: var(--color_headings);
 }
 
 /* For each list item under a inline list */
-.list--inline .list__item{
-    display: inline-block;
-    margin-right: 2rem;
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
 }
 
 .list--tick {
-    list-style-image: url(../Images/tick.svg);
-    padding-left: 3rem;
+  list-style-image: url(../Images/tick.svg);
+  padding-left: 3rem;
 }
 
 /* For a tick list, add some padding between the tick and item */
-.list--tick .list__item{
-    padding-left: 0.5rem;
-    margin-bottom: 1rem;
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 1024px){
-    .list--tick .list__item{
-        padding-left: 0;
-    }
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
+  }
 }
 
 /* Icons */
 
 .icon {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .icon--primary {
-    fill: var(--color_primary);
+  fill: var(--color_primary);
 }
 
-.icon-container{
-    background: #f3f9faee;
-    width: 64px;
-    height: 64px;
-    border-radius: 100%;
-    display: inline-flex; /* Make span element take into account width and height, and positions items in container */
-    justify-content: center;
-    align-items: center;
+.icon-container {
+  background: #f3f9faee;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex; /* Make span element take into account width and height, and positions items in container */
+  justify-content: center;
+  align-items: center;
 }
 
 /* Buttons */
 
 .button {
-    border-radius: 40px;
-    border: 0;
-    cursor: pointer;
-    font-size: 1.8rem;
-    font-weight: 600;
-    padding: 2rem 3rem;
-    text-align: center;
-    text-transform: uppercase;
-    white-space: nowrap; /* Text in button won't wrap to new line */
-    margin: 1rem 0;
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap; /* Text in button won't wrap to new line */
+  margin: 1rem 0;
 }
 
 .button--primary {
-    background: var(--color_primary);
-    color: white;
+  background: var(--color_primary);
+  color: white;
 }
 
 .button--primary:hover {
-    background: rgb(135, 18, 135);
+  background: rgb(135, 18, 135);
 }
 
 .button--secondary {
-    background: var(--color_secondary);
-    color: white;
+  background: var(--color_secondary);
+  color: white;
 }
 
 .button--secondary:hover {
-    background: rgb(175, 36, 159);
+  background: rgb(175, 36, 159);
 }
 
 .button--accent {
-    background: var(--color_accent);
-    color: white;
+  background: var(--color_accent);
+  color: white;
 }
 
 .button--accent:hover {
-    background: rgb(255, 86, 19);
+  background: rgb(255, 86, 19);
 }
 
 .button--outline {
-    background: white;
-    color: var(--color_headings);
-    border: 2px solid var(--color_headings);
+  background: white;
+  color: var(--color_headings);
+  border: 2px solid var(--color_headings);
 }
 
 .button--outline:hover {
-    background: var(--color_headings);
-    color: white;
+  background: var(--color_headings);
+  color: white;
 }
 
 /* This button takes up entire width of its parent element */
 .button--block {
-    width: 100%;
-    display: inline-block; /* anchor elements are inline by default, this is to make width work */
+  width: 100%;
+  display: inline-block; /* anchor elements are inline by default, this is to make width work */
 }
 
 @media screen and (min-width: 1024px) {
-    .button {
-        font-size: 1.5rem;
-    }
+  .button {
+    font-size: 1.5rem;
+  }
+}
+
+/* Inputs */
+
+.input {
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  color: var(--color_headings); /* Input text color */
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+
+/* Selects all placeholders in inputs */
+::placeholder {
+  color: #cdcbd7;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
 }
