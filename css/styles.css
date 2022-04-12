@@ -269,7 +269,7 @@ a {
 .input-group {
   border: 1px solid var(--color_border);
   border-radius: var(--border-radius);
-  display: flex;
+  display: flex; /* To use flex-grow below */
 }
 
 /* Input inside a input-group shouldn't have a border */
@@ -289,4 +289,28 @@ a {
   .input {
     font-size: 1.5rem;
   }
+}
+
+/* Cards */
+
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden; /* Setting background color down below fills the entire header, so we hides overflow to keep border-radius */
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+/* Card with primary color header */
+.card--primary .card__header {
+  background: var(--color_primary);
+  color: white;
+}
+
+.card--secondary .card__header {
+  background: var(--color_secondary);
+  color: white;
 }
