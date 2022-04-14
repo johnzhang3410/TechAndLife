@@ -11,27 +11,38 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <blockquote class="quote">
-        <p class="quote__text"> 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quam?
-        </p>
-        <footer>
-            <div class="media">
-                <div class="media__image">
-                    <svg class="icon icon--primary quote__line">
-                        <use xlink:href="Images/sprite.svg#line"></use>
+<body style="padding: 5rem;">
+    <div class="card testimonial">
+        <div class="grid grid--1x2">
+            <div class="testimonial__image" >
+                <img src="images/me.jpg" alt="A picture of John">
+                <span class="icon-container icon-continer--accent">
+                    <svg class="icon icon--white icon--small">
+                        <use xlink:href="Images/sprite.svg#quotes"></use>
                     </svg>
-                </div>
-                <div class="media__body">
-                    <h3 class="media__title quote__author">John Zhang</h3>
-                    <p class="quote__organization">
-                        Student, University of Waterloo
-                    </p>
-                </div>
+                </span>
             </div>
-        </footer>
-    </blockquote>
-    
+            <blockquote class="quote">
+                <p class="quote__text"> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quam?
+                </p>
+                <footer>
+                    <div class="media">
+                        <div class="media__image">
+                            <svg class="icon icon--primary quote__line">
+                                <use xlink:href="Images/sprite.svg#line"></use>
+                            </svg>
+                        </div>
+                        <div class="media__body">
+                            <h3 class="media__title quote__author">John Zhang</h3>
+                            <p class="quote__organization">
+                                Student, University of Waterloo
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+            </blockquote>
+        </div>
+    </div>  
 </body>
 </html>

@@ -172,8 +172,17 @@ a {
   height: 40px;
 }
 
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .icon--primary {
   fill: var(--color_primary);
+}
+
+.icon--white {
+  fill: white;
 }
 
 .icon-container {
@@ -184,6 +193,10 @@ a {
   display: inline-flex; /* Make span element take into account width and height, and positions items in container */
   justify-content: center;
   align-items: center;
+}
+
+.icon-continer--accent {
+  background: var(--color_accent);
 }
 
 /* Buttons */
@@ -453,5 +466,62 @@ a {
 
   .quote__organization {
     font-size: 1.6rem;
+  }
+}
+
+/* Grids */
+
+/* Single column grid for mobile */
+.grid {
+  display: grid;
+}
+
+/* 2 column grid for tablets and bigger */
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonials */
+
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > img {
+  width: 100%; /* Takes up entire width of the cell, because image has width/height */
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial .icon-container {
+    margin-right: 5px;
   }
 }
