@@ -252,6 +252,11 @@ a {
   color: white;
 }
 
+.button--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 /* This button takes up entire width of its parent element */
 .button--block {
   width: 100%;
@@ -523,5 +528,49 @@ a {
 @media screen and (max-width: 768px) {
   .testimonial .icon-container {
     margin-right: 5px;
+  }
+}
+
+/* Callouts */
+
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout--primary {
+  background: var(--color_primary);
+  color: white;
+}
+
+.callout__heading {
+  color: white;
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.callout .button {
+  align-self: center;
+  justify-self: center;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  /* Wider screens layout change from each section taking half of the page
+   to button take just enough space (auto) and content take all left available */
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .button {
+    justify-self: start;
+    margin: 0 2rem;
   }
 }
