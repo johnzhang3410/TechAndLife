@@ -208,11 +208,20 @@ a {
   cursor: pointer;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 1rem 0;
+  outline: 0;
   padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap; /* Text in button won't wrap to new line */
-  margin: 1rem 0;
+}
+
+/* If we have an icon inside a button */
+.button .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .button--primary {
@@ -298,7 +307,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1; /* Grow to take up entire available space in main (horizontal) axis */
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 
 /* Button inside an input-group should have less margin (1rem originally) */
@@ -754,5 +763,34 @@ a {
 
   .hero {
     margin-top: 0;
+  }
+}
+
+/* Search Block */
+.block-search .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-search__samples {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto; /* horizontal margin set to auto centers the element */
+}
+
+@media screen and (min-width: 768px) {
+  .block-search__samples {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(10rem, 1fr)
+    ); /* auto-fit will adjust number of columns with # of list items */
+    /* Each list item will take minimally 10rem, and max 1 fraction (entire width) */
   }
 }
