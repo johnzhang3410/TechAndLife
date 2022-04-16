@@ -4,3 +4,5 @@ collapsibles.forEach((item) =>
     this.classList.toggle("collapsible--expanded");
   })
 );
+
+/* Toggles collapsible--expanded on and off */

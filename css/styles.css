@@ -35,6 +35,7 @@ h2,
 h3 {
   color: var(--color_headings);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -649,4 +650,109 @@ a {
 .container {
   max-width: 1140px;
   margin: 0 auto; /* Block is always centered on the screen */
+}
+
+/* Navigation Bar */
+
+.nav {
+  background: #000;
+  display: flex;
+  flex-wrap: wrap; /* Flex is nowrap (squeeze on the same line) by default */
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+/* Nav list is now on a new line with flex-wrap: wrap */
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item {
+  padding: 0.5rem 2rem;
+  border-bottom: 2px solid #222;
+}
+
+/* Anchor has its own color so we have to change the anchor color */
+.nav__item > a {
+  color: rgb(233, 230, 230);
+  transition: color 0.3s; /* transition for hovering over list items */
+}
+
+.nav__item > a:hover {
+  color: #fff;
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
+  cursor: pointer;
+}
+
+/* Collapsible--expanded gets toggled when collapsible gets clicked */
+/* Change icon opacity when have both nav and collapsible--expanded */
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
+
+.nav__logo {
+  transform: translateY(3px);
+}
+
+.nav__item-top {
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item {
+    border-bottom: none;
+  }
+
+  .nav__item-top {
+    padding-top: 0.5rem;
+  }
+}
+
+/* Hero */
+
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  padding-bottom: 2rem;
+}
+
+.hero__image {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__image {
+    margin-top: 0;
+  }
+
+  .hero__content {
+    text-align: left;
+    align-self: center;
+  }
+
+  .hero {
+    margin-top: 0;
+  }
 }
