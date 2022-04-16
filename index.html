@@ -19,7 +19,11 @@
                 <p class="hero__tagline">Including my projects, experiences, as well as my goals and interests</p>
                 <a href="#" class="button button--accent button--stretched">Contact Me</a>
             </header>
-            <img class="hero__image" src="Images/AI.png" alt="">
+            <picture>
+                <source type="image/webp" srcset="Images/AI.webp 1x, Images/AI@2x.webp 2x">
+                <source type="image/png" srcset="Images/AI.png 1x, Images/AI@2x.png 2x"> 
+                <img class="hero__image" src="Images/AI.png" alt="">
+            </picture>
         </div>
     </section>
 </body>

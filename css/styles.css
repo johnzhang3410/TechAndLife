@@ -749,7 +749,7 @@ a {
 
   .hero__content {
     text-align: left;
-    align-self: center;
+    align-self: center; /* Align content vertically in the center of grid */
   }
 
   .hero {
