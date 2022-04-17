@@ -350,13 +350,21 @@ a {
   background: rgb(148, 10, 132);
 }
 
+.card--primary .badge--primary {
+  background: rgb(101, 5, 101);
+}
+
 /* Plans */
+
+.plan {
+  transition: transform 0.2s ease-out;
+}
 
 .plan__name {
   color: white;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
   font-weight: 500;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .plan__price {
@@ -371,7 +379,7 @@ a {
 }
 
 .plan__description {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 300;
   letter-spacing: 1px;
   display: block;
@@ -379,6 +387,10 @@ a {
 
 .plan .list__item {
   margin-bottom: 2rem;
+}
+
+.plan--popular {
+  transform: scale(1.1);
 }
 
 .plan--popular .card__header {
@@ -393,6 +405,14 @@ a {
   position: absolute;
   top: -5px;
   right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -793,4 +813,16 @@ a {
     ); /* auto-fit will adjust number of columns with # of list items */
     /* Each list item will take minimally 10rem, and max 1 fraction (entire width) */
   }
+}
+
+/* Plans Block */
+
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+/* So cards doesn't stretch which is ugly */
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
 }

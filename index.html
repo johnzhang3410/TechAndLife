@@ -12,27 +12,66 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <section class="block container block-search">
-        <header class="block__header">
-            <h2>Some of the courses I have taken</h2>
-            <p>
-                Including CS, Math, Physics and Electrical Engineering Courses
-            </p>
-        </header>
-        <div class="input-group">
-            <input type="text" class="input" placeholder="Enter course name here...">
-            <button class="button button--accent">    <svg class="icon icon--white">
-                <use xlink:href="Images/sprite.svg#search"></use>
-            </svg>Search</button>
+    <section class="block container block-plans">
+        <div class="grid grid--1x3">
+            <div class="plan">
+                <div class="card card--secondary">
+                    <header class="card__header">
+                        <h3 class="plan__name">C++</h3>
+                        <span class="plan__description">Project Name</span>
+                    </header>
+                    <div class="card__body">
+                        <ul class="list list--tick">
+                            <li class="list__item">Feature 1</li>
+                            <li class="list__item">Feature 2</li>
+                            <li class="list__item">Feature 3</li>
+                            <li class="list__item">Feature 4</li>
+                        </ul>
+                        <button class="button button--outline button--block">GitHub</button>
+                    </div>
+                </div>
+            </div>
+            <div class="plan plan--popular">
+                <div class="card card--primary">
+                    <header class="card__header">
+                        <h3 class="plan__name">Entry</h3>
+                        <span class="plan__price">$14</span>
+                        <span class="plan__billing-cycle">/month</span>
+                        <span class="badge badge--primary badge--small">10% OFF</span>
+                        <span class="plan__description">Easiest start on the cloud</span>
+                    </header>
+                    <div class="card__body">
+                        <ul class="list list--tick">
+                            <li class="list__item">Unlimited Websites</li>
+                            <li class="list__item">Unlimited Bandwidth</li>
+                            <li class="list__item">100GB SSD Storage</li>
+                            <li class="list__item">3GB RAM</li>
+                        </ul>
+                        <button class="button button--outline button--block">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="plan">
+                <div class="card card--secondary">
+                    <header class="card__header">
+                        <h3 class="plan__name">Entry</h3>
+                        <span class="plan__price">$14</span>
+                        <span class="plan__billing-cycle">/month</span>
+                        <span class="badge badge--secondary badge--small">10% OFF</span>
+                        <span class="plan__description">Easiest start on the cloud</span>
+                    </header>
+                    <div class="card__body">
+                        <ul class="list list--tick">
+                            <li class="list__item">Unlimited Websites</li>
+                            <li class="list__item">Unlimited Bandwidth</li>
+                            <li class="list__item">100GB SSD Storage</li>
+                            <li class="list__item">3GB RAM</li>
+                        </ul>
+                        <button class="button button--outline button--block">Buy Now</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <ul class="list block-search__samples">
-            <li><span class="badge badge--secondary">ECE 250</span></li>
-            <li>ECE 240</li>
-            <li>ECE 204</li>
-            <li>ECE 222</li>
-            <li>ECE 205</li>
-            <li>ECE 109</li>
-        </ul>
     </section>
     <script src="js/main.js"></script>
 </body>
