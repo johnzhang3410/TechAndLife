@@ -12,38 +12,47 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <section class="block container">
+    <section class="block">
         <header class="block__header">
-            <h2 class="feature__header">Experience</h2>
+            <h2>About Me</h2>
         </header>
-        <article class="grid grid--1x2 feature">
-            <div class="feature__content">
-                <h3 class="feature__heading">Localization Specialist, OpenText</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, dignissimos!
-                </p>
-                <a href="#" class="link-arrow">Learn More</a>
+        <div class="container">
+            <div class="card testimonial">
+                <div class="grid grid--1x2">
+                    <div >
+                        <picture class="testimonial__image" >
+                            <source type="image/webp" srcset="Images/me.webp">
+                            <img src="Images/me.png" alt="A picture of John">
+                        </picture>
+                        <span class="icon-container icon-continer--accent">
+                            <svg class="icon icon--white icon--small">
+                                <use xlink:href="Images/sprite.svg#quotes"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <blockquote class="quote">
+                        <p class="quote__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quam?
+                        </p>
+                        <footer>
+                            <div class="media">
+                                <div class="media__image">
+                                    <svg class="icon icon--primary quote__line">
+                                        <use xlink:href="Images/sprite.svg#line"></use>
+                                    </svg>
+                                </div>
+                                <div class="media__body">
+                                    <h3 class="media__title quote__author">Fangrui Zhang</h3>
+                                    <p class="quote__organization">
+                                        ECE 2B, University of Waterloo
+                                    </p>
+                                </div>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
             </div>
-            <picture>
-                <source type="image/webp" srcset="Images/localization.webp 1x, Images/localization@2x.webp 2x">
-                <source type="image/png" srcset="Images/localization.png 1x, Images/localization@2x.png 2x">
-                <img class="feature__image" src="Images/localization@2x.png" alt="">
-            </picture>
-        </article>
-        <article class="grid grid--1x2 feature">
-            <div class="feature__content">
-                <h3 class="feature__heading">WE Accelerate Azure AI, Microsoft</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, dignissimos!
-                </p>
-                <a href="#" class="link-arrow">Learn More</a>
-            </div>
-            <picture>
-                <source type="image/webp" srcset="Images/cloud.webp 1x, Images/cloud@2x.webp 2x">
-                <source type="image/png" srcset="Images/cloud.png 1x, Images/cloud@2x.png 2x">
-                <img class="feature__image" src="Images/cloud@2x.png" alt="">
-            </picture>
-        </article>
+        </div>
     </section>
     <script src="js/main.js"></script>
 </body>
