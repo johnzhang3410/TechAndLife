@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
@@ -19,28 +20,28 @@
                 <use xlink:href="Images/sprite.svg#menu"></use>
             </svg>
             <ul class="list nav__list collapsible__content">
-                <li class="nav__item nav__item-top"><a href="#intro">About Me</a></li>
-                <li class="nav__item"><a href="#">Projects</a></li>
-                <li class="nav__item"><a href="#">Experiences</a></li>
+                <li class="nav__item nav__item-top"><a href="#about">About Me</a></li>
+                <li class="nav__item"><a href="#projects">Projects</a></li>
+                <li class="nav__item"><a href="#experiences">Experiences</a></li>
                 <li class="nav__item"><a href="#">Blogs</a></li>
             </ul>
         </nav>
     </header>
     <section class="block block--dark block--skewed-left hero">
         <div class="container grid grid--1x2">
-            <header class="block__header hero__content">
+            <header class="block__header hero__content" data-aos="zoom-out-right">
                 <h1 class="block__heading">This is My Personal Site</h1>
                 <p class="hero__tagline">Including my projects, experiences, as well as my goals and interests</p>
                 <a href="mailto:f232zhan@uwaterloo.ca" class="button button--accent button--stretched">Contact Me</a>
             </header>
-            <picture>
+            <picture data-aos="zoom-out-left">
                 <source type="image/webp" srcset="Images/AI.webp 1x, Images/AI@2x.webp 2x">
                 <source type="image/png" srcset="Images/AI.png 1x, Images/AI@2x.png 2x"> 
                 <img class="hero__image" src="Images/AI.png" alt="">
             </picture>
         </div>
     </section>
-    <section class="block intro">
+    <section id="about" class="block intro" data-aos="flip-up">
         <header class="block__header">
             <h2>About Me</h2>
         </header>
@@ -52,11 +53,6 @@
                             <source type="image/webp" srcset="Images/me.webp">
                             <img src="Images/me.png" alt="A picture of John">
                         </picture>
-                        <span class="icon-container icon-continer--accent">
-                            <svg class="icon icon--white icon--small">
-                                <use xlink:href="Images/sprite.svg#quotes"></use>
-                            </svg>
-                        </span>
                     </div>
                     <blockquote class="quote">
                         <p class="quote__text-front">
@@ -89,7 +85,7 @@
             </div>
         </div>
     </section>
-    <section class="block container block-search">
+    <section class="block container block-search" data-aos="fade-up">
         <header class="block__header">
             <h2>Some of the courses I have taken</h2>
             <p>
@@ -105,7 +101,7 @@
             <li><a target="_blank" href="https://uwflow.com/course/ece109">ECE 109</a></li>
         </ul>
     </section>
-    <section class="block container block-plans">
+    <section id="projects" class="block container block-plans" data-aos="fade-left">
         <header class="block__header project__header">
             <h2>Project Samples</h2>
         </header>
@@ -163,33 +159,33 @@
             </div>
         </div>
     </section>
-    <section class="block container">
+    <section id="experiences" class="block container">
         <header class="block__header">
             <h2 class="feature__header">Experience</h2>
         </header>
         <article class="grid grid--1x2 feature">
-            <div class="feature__content">
+            <div class="feature__content" data-aos="fade-right">
                 <h3 class="feature__heading">Localization Specialist, OpenText</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, dignissimos!
                 </p>
                 <a href="https://www.opentext.com/" class="link-arrow" target="_blank">Learn More</a>
             </div>
-            <picture>
+            <picture data-aos="zoom-in-left">
                 <source type="image/webp" srcset="Images/localization.webp 1x, Images/localization@2x.webp 2x">
                 <source type="image/png" srcset="Images/localization.png 1x, Images/localization@2x.png 2x">
                 <img class="feature__image" src="Images/localization@2x.png" alt="">
             </picture>
         </article>
         <article class="grid grid--1x2 feature">
-            <div class="feature__content">
+            <div class="feature__content" data-aos="fade-left">
                 <h3 class="feature__heading">WE Accelerate Azure AI, Microsoft</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, dignissimos!
                 </p>
                 <a href="https://uwaterloo.ca/co-operative-education/waterloo-experience-accelerate-home" class="link-arrow" target="_blank">Learn More</a>
             </div>
-            <picture>
+            <picture data-aos="zoom-in-right">
                 <source type="image/webp" srcset="Images/cloud.webp 1x, Images/cloud@2x.webp 2x">
                 <source type="image/png" srcset="Images/cloud.png 1x, Images/cloud@2x.png 2x">
                 <img class="feature__image" src="Images/cloud@2x.png" alt="">
@@ -251,5 +247,9 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

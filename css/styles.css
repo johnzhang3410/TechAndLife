@@ -26,6 +26,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -542,19 +543,8 @@ a {
   padding: 3rem;
 }
 
-.testimonial__image {
-  position: relative;
-  z-index: -1;
-}
-
 .testimonial__image > img {
   width: 100%; /* Takes up entire width of the cell, because image has width/height */
-}
-
-.testimonial__image > .icon-container {
-  position: absolute;
-  top: 3rem;
-  right: -32px;
 }
 
 @media screen and (min-width: 768px) {
@@ -566,9 +556,13 @@ a {
   .testimonial .quote {
     margin-left: 6rem;
   }
+
+  .testimonial__image > img {
+    min-width: 375px;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .testimonial .icon-container {
     margin-right: 5px;
   }
