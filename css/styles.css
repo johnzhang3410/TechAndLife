@@ -145,7 +145,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color_headings);
 }
 
 /* For each list item under a inline list */
@@ -215,7 +214,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap; /* Text in button won't wrap to new line */
@@ -313,6 +312,7 @@ a {
   border: 0;
   flex-grow: 1; /* Grow to take up entire available space in main (horizontal) axis */
   padding: 1.5rem 2rem;
+  width: 0; /* Rid of default width and let flex grow take over the width property */
 }
 
 /* Button inside an input-group should have less margin (1rem originally) */
@@ -462,16 +462,23 @@ a {
 
 .quote {
   font-size: 3rem;
-  font-style: italic;
   color: var(--color_body_darker);
   line-height: 1.3;
 }
 
-.quote__text::before {
+.quote__anchor {
+  color: rgb(253, 145, 21);
+}
+
+.quote__anchor:hover {
+  color: rgb(255, 93, 34);
+}
+
+.quote__text-front::before {
   content: open-quote;
 }
 
-.quote__text::after {
+.quote__text-end::after {
   content: close-quote;
 }
 
@@ -537,6 +544,7 @@ a {
 
 .testimonial__image {
   position: relative;
+  z-index: -1;
 }
 
 .testimonial__image > img {
@@ -696,6 +704,11 @@ a {
   justify-content: space-between;
   padding: 1rem;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 /* Nav list is now on a new line with flex-wrap: wrap */
@@ -765,6 +778,10 @@ a {
 
 /* Hero */
 
+.hero {
+  margin-top: 6rem;
+}
+
 .hero__tagline {
   font-size: 2rem;
   color: #b9c3cf;
@@ -786,10 +803,6 @@ a {
     text-align: left;
     align-self: center; /* Align content vertically in the center of grid */
   }
-
-  .hero {
-    margin-top: 0;
-  }
 }
 
 /* Search Block */
@@ -802,13 +815,27 @@ a {
 
 .block-search__samples {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 6rem);
+  grid-template-columns: repeat(2, 1fr);
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
   max-width: 700px;
   margin: 0 auto; /* horizontal margin set to auto centers the element */
+  border: 3px solid purple;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: var(--color_headings);
+}
+
+.block-search__samples a {
+  color: purple;
+}
+
+.block-search__samples a:hover {
+  color: white;
+  background: var(--color_primary);
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -818,6 +845,16 @@ a {
       minmax(10rem, 1fr)
     ); /* auto-fit will adjust number of columns with # of list items */
     /* Each list item will take minimally 10rem, and max 1 fraction (entire width) */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .block-search__samples {
+    grid-template-rows: repeat(2, 6rem);
+  }
+
+  .block-search__samples li {
+    margin-bottom: 0;
   }
 }
 
@@ -854,20 +891,13 @@ a {
 }
 
 .feature__header {
-  font-style: italic;
-  font-weight: 900;
-  font-size: 4.5rem;
+  font-weight: 700;
+  font-size: 4rem;
 }
 
 @media screen and (min-width: 768px) {
   .feature:nth-of-type(even) .feature__content {
     order: 2; /* Every other feature has grids content and image swapped */
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .feature__header {
-    font-size: 3rem;
   }
 }
 
@@ -947,4 +977,8 @@ a {
   .footer__heading {
     font-size: 1.6rem;
   }
+}
+
+.project__header {
+  margin-bottom: 5rem;
 }

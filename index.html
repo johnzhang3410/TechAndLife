@@ -12,6 +12,190 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <header>
+        <nav class="nav collapsible">
+            <a class="nav__logo" href="/"><img src="Images/logo_white.png" alt=""></a>
+            <svg class="icon icon--white nav__toggler">
+                <use xlink:href="Images/sprite.svg#menu"></use>
+            </svg>
+            <ul class="list nav__list collapsible__content">
+                <li class="nav__item nav__item-top"><a href="#intro">About Me</a></li>
+                <li class="nav__item"><a href="#">Projects</a></li>
+                <li class="nav__item"><a href="#">Experiences</a></li>
+                <li class="nav__item"><a href="#">Blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="block block--dark block--skewed-left hero">
+        <div class="container grid grid--1x2">
+            <header class="block__header hero__content">
+                <h1 class="block__heading">This is My Personal Site</h1>
+                <p class="hero__tagline">Including my projects, experiences, as well as my goals and interests</p>
+                <a href="mailto:f232zhan@uwaterloo.ca" class="button button--accent button--stretched">Contact Me</a>
+            </header>
+            <picture>
+                <source type="image/webp" srcset="Images/AI.webp 1x, Images/AI@2x.webp 2x">
+                <source type="image/png" srcset="Images/AI.png 1x, Images/AI@2x.png 2x"> 
+                <img class="hero__image" src="Images/AI.png" alt="">
+            </picture>
+        </div>
+    </section>
+    <section class="block intro">
+        <header class="block__header">
+            <h2>About Me</h2>
+        </header>
+        <div class="container">
+            <div class="card testimonial">
+                <div class="grid grid--1x2">
+                    <div >
+                        <picture class="testimonial__image" >
+                            <source type="image/webp" srcset="Images/me.webp">
+                            <img src="Images/me.png" alt="A picture of John">
+                        </picture>
+                        <span class="icon-container icon-continer--accent">
+                            <svg class="icon icon--white icon--small">
+                                <use xlink:href="Images/sprite.svg#quotes"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <blockquote class="quote">
+                        <p class="quote__text-front">
+                            I'm a Computer Engineering student at the University of Waterloo and most recently an intern at <a class="quote__anchor" target="_blank" href="https://www.opentext.com/">OpenText</a>.
+                        </p>
+                        <p>
+                            I'm a true believer of lifelong learning, as learning something new everyday incrementally pushes me to be a better version of myself.
+                        </p>
+                        <p class="quote__text-end">
+                            I enjoy listening to music, playing violin and learning to code during my spare time.
+                        </p>
+                       
+                        <footer>
+                            <div class="media">
+                                <div class="media__image">
+                                    <svg class="icon icon--primary quote__line">
+                                        <use xlink:href="Images/sprite.svg#line"></use>
+                                    </svg>
+                                </div>
+                                <div class="media__body">
+                                    <h3 class="media__title quote__author">Fangrui Zhang</h3>
+                                    <p class="quote__organization">
+                                        ECE 2B, University of Waterloo
+                                    </p>
+                                </div>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="block container block-search">
+        <header class="block__header">
+            <h2>Some of the courses I have taken</h2>
+            <p>
+                Including CS, Math, Physics and Electrical Engineering Courses
+            </p>
+        </header>
+        <ul class="list block-search__samples">
+            <li><a target="_blank" href="https://uwflow.com/course/ece250">ECE 250</a></li>
+            <li><a target="_blank" href="https://uwflow.com/course/ece240">ECE 240</a></li>
+            <li><a target="_blank" href="https://uwflow.com/course/ece204">ECE 204</a></li>
+            <li><a target="_blank" href="https://uwflow.com/course/ece205">ECE 205</a></li>
+            <li><a target="_blank" href="https://uwflow.com/course/ece222">ECE 222</a></li>
+            <li><a target="_blank" href="https://uwflow.com/course/ece109">ECE 109</a></li>
+        </ul>
+    </section>
+    <section class="block container block-plans">
+        <header class="block__header project__header">
+            <h2>Project Samples</h2>
+        </header>
+        <div class="grid grid--1x3">
+            <div class="plan">
+                <div class="card card--secondary">
+                    <header class="card__header">
+                        <h3 class="plan__name">Python</h3>
+                        <span class="plan__description">FlappyBird</span>
+                    </header>
+                    <div class="card__body">
+                        <ul class="list list--tick">
+                            <li class="list__item">Pygame & Tutle Graphics</li>
+                            <li class="list__item">Scoring System</li>
+                            <li class="list__item">Collision System</li>
+                            <li class="list__item">BGM & UI</li>
+                        </ul>
+                        <a class="button button--outline button--block" href="https://github.com/johnzhang3410/flappybirdgame" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="plan">
+                <div class="card card--secondary">
+                    <header class="card__header">
+                        <h3 class="plan__name">ARM Assembly</h3>
+                        <span class="plan__description">ECE 222 Labs</span>
+                    </header>
+                    <div class="card__body">
+                        <ul class="list list--tick">
+                            <li class="list__item">Delays & Branches</li>
+                            <li class="list__item">LED Heliograph</li>
+                            <li class="list__item">Polling Methods</li>
+                            <li class="list__item">Interrupts Handling</li>
+                        </ul>
+                        <a class="button button--outline button--block" href="https://github.com/johnzhang3410/222Labs" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="plan">
+                <div class="card card--secondary">
+                    <header class="card__header">
+                        <h3 class="plan__name">HTML/CSS</h3>
+                        <span class="plan__description">My Website</span>
+                    </header>
+                    <div class="card__body">
+                        <ul class="list list--tick">
+                            <li class="list__item">Object-Oriented CSS</li>
+                            <li class="list__item">Image Optimization</li>
+                            <li class="list__item">Retina Support</li>
+                            <li class="list__item">Responsive Design</li>
+                        </ul>
+                        <a class="button button--outline button--block" href="https://github.com/johnzhang3410/My-Website" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="block container">
+        <header class="block__header">
+            <h2 class="feature__header">Experience</h2>
+        </header>
+        <article class="grid grid--1x2 feature">
+            <div class="feature__content">
+                <h3 class="feature__heading">Localization Specialist, OpenText</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, dignissimos!
+                </p>
+                <a href="https://www.opentext.com/" class="link-arrow" target="_blank">Learn More</a>
+            </div>
+            <picture>
+                <source type="image/webp" srcset="Images/localization.webp 1x, Images/localization@2x.webp 2x">
+                <source type="image/png" srcset="Images/localization.png 1x, Images/localization@2x.png 2x">
+                <img class="feature__image" src="Images/localization@2x.png" alt="">
+            </picture>
+        </article>
+        <article class="grid grid--1x2 feature">
+            <div class="feature__content">
+                <h3 class="feature__heading">WE Accelerate Azure AI, Microsoft</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, dignissimos!
+                </p>
+                <a href="https://uwaterloo.ca/co-operative-education/waterloo-experience-accelerate-home" class="link-arrow" target="_blank">Learn More</a>
+            </div>
+            <picture>
+                <source type="image/webp" srcset="Images/cloud.webp 1x, Images/cloud@2x.webp 2x">
+                <source type="image/png" srcset="Images/cloud.png 1x, Images/cloud@2x.png 2x">
+                <img class="feature__image" src="Images/cloud@2x.png" alt="">
+            </picture>
+        </article>
+    </section>
     <footer class="block block--dark footer">
         <div class="container grid footer__sections">
             <section class="collapsible collapsible--expanded footer__section">
@@ -23,24 +207,23 @@
                 </header>
                 <div class="collapsible__content">
                     <ul class="list">
-                        <li><a href="#">UWaterloo</a></li>
-                        <li><a href="#">OpenText</a></li>
+                        <li><a href="https://uwaterloo.ca/" target="_blank">UWaterloo</a></li>
+                        <li><a href="https://www.opentext.com/" target="blank">OpenText</a></li>
                         <li><a href="#"></a></li>
                     </ul>
                 </div>
             </section>
             <section class="collapsible footer__section">
                 <header class="collapsible__header">
-                    <h2 class="collapsible__heading footer__heading">Find Me</h2>
+                    <h2 class="collapsible__heading footer__heading">Get in Touch</h2>
                     <svg class="icon icon--white collapsible__chevron">
                         <use xlink:href="Images/sprite.svg#chevron"></use>
                     </svg>
                 </header>
                 <div class="collapsible__content">
                     <ul class="list">
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Email Me</a></li>
+                        <li><a href="https://www.linkedin.com/in/john-fangrui-zhang/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/johnzhang3410" target="_blank">GitHub</a></li>
                     </ul>
                 </div>
             </section>
