@@ -1,3 +1,5 @@
+@import "./normalize.css";
+
 :root {
   --color_primary: rgb(123, 6, 123); /*When hovering over project card*/
   --color_secondary: rgb(178, 11, 158);
