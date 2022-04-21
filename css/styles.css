@@ -86,15 +86,23 @@ a {
   text-transform: uppercase;
 }
 
+/* TODO: Arrow breaks for the second expereince in mobile under 445px */
 .link-arrow::after {
-  content: "-->";
+  content: "—>";
   margin-left: 5px;
   transition: margin 0.15s;
+  width: auto;
 }
 
 .link-arrow:hover::after {
   /*Arrow move right when hover over link*/
   margin-left: 10px;
+}
+
+@media screen and (max-width: 445px) {
+  .link-arrow::after {
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 1024px) {
