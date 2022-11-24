@@ -1,4 +1,4 @@
 # My-Website
-My personal site
+My personal site with some nice css animations :)
 
 Access the website here: https://fangruizhang.netlify.app/
